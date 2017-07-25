@@ -8,11 +8,12 @@ class Container
   end
 
   def fill_with_ingredient(ingredient)
-    (@maximum_holding_weight / ingredient.weight).round.times {
+    count = 0
+    (@maximum_holding_weight / ingredient.weight).to_i.times {
       @ingredients << ingredient
-      @weight += ingredient.weight
+      count += 1
     }
-    @weight = @weight.round
+    @weight = @weight + count * ingredient.weight
   end
 
   def which_ingredient
