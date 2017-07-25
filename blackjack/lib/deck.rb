@@ -1,5 +1,5 @@
 class Deck
-  attr_reader :all_cards
+  attr_reader :all_cards, :suits, :values
 
   def initialize
     @suits = ['Diamonds', 'Hearts', 'Clubs', 'Spades']

@@ -7,9 +7,9 @@ RSpec.describe Card do
   describe "initialize" do
     it "gives the correct ranking" do
       expect(card1.value).to eq(6)
-      expect(card2.value).to eq(10)
-      expect(card3.value).to eq(11)
       expect(card2.rank).to eq("K")
+      expect(card3.suit).to eq("Diamond")
+      expect(card2.value).to eq(10)
     end
   end
 end

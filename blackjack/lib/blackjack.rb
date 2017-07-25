@@ -1,7 +1,6 @@
 require_relative "card"
 require_relative "deck"
 require_relative "hand"
-require 'pry'
 
 player = Hand.new('Player')
 dealer = Hand.new('Dealer')

@@ -4,8 +4,14 @@ RSpec.describe Hand do
   let (:deck) {Deck.new}
   let (:my_hand) {Hand.new('player')}
   describe "#initialize" do
+    it "has a name of the owner" do
+      expect(my_hand.player).to eq('player')
+    end
     it "is an empty array" do
       expect(my_hand.cards.size).to eq(0)
+    end
+    it "has a score of zero" do
+      expect(my_hand.score).to eq(0)
     end
   end
 
