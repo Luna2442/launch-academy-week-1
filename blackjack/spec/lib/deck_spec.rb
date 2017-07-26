@@ -5,8 +5,8 @@ RSpec.describe Deck do
   describe "#initialize" do
     it "creates a full deck with correct values" do
       expect(deck.all_cards.size).to eq(52)
-      expect(deck.suits).to eq(['Diamonds', 'Hearts', 'Clubs', 'Spades'])
-      expect(deck.values).to eq([2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'])
+      expect(deck.suits).to eq(['♦', '♥', '♣', '♠'])
+      expect(deck.ranks).to eq([2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'])
     end
   end
 

@@ -22,7 +22,7 @@ while playing
   response = gets.chomp
   if response.downcase == "h"
     player.hit(deck)
-    puts "#{player.player}'s Score: #{player.score}"
+    puts "#{player.player}'s Score: #{player.score}\n"
     if player.score > 21
       puts "\nBust, you lose!"
       bust = true

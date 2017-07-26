@@ -1,22 +1,14 @@
 class Card
-  attr_reader :rank, :suit, :value
+  attr_reader :rank, :suit, :low_ace
 
-  def initialize (rank, suit)
+  def initialize(rank, suit)
     @rank = rank
-    @value = ranking(rank)
     @suit = suit
+    @low_ace = false
   end
 
-  private
-
-  def ranking(value)
-    if ['J','Q','K'].include?(value)
-      return 10
-    elsif value == 'A'
-      return 11
-    else
-      return value
-    end
+  def reduce_ace
+    @low_ace = true
   end
 
 end
