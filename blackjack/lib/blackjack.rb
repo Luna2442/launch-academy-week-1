@@ -18,7 +18,7 @@ puts ""
 
 playing = true
 while playing
-  print "Hit or stand (H/S)\n\n"
+  print "Hit or stand (H/S)\n"
   response = gets.chomp
   if response.downcase == "h"
     player.hit(deck)
@@ -33,7 +33,7 @@ while playing
   end
 end
 
-puts ""
+# puts ""
 
 if bust != true
   dealer_playing = true

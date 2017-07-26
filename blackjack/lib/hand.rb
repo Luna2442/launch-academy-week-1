@@ -9,6 +9,7 @@ class Hand
   end
 
   def hit(deck)
+    puts ""
     card = deck.deal_card
     @cards << card
     calculate_score
