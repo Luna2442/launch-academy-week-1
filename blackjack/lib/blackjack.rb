@@ -12,7 +12,7 @@ deck = Deck.new
 deck.shuffle_cards
 
 2.times {player.hit(deck)}
-puts "#{player.player}'s Score: #{player.score}"
+puts "#{player.player}'s Score: #{player.score}\n"
 
 puts ""
 
@@ -22,9 +22,9 @@ while playing
   response = gets.chomp
   if response.downcase == "h"
     player.hit(deck)
-    puts "#{player.player}'s Score: #{player.score}\n"
+    puts "#{player.player}'s Score: #{player.score}"
     if player.score > 21
-      puts "\nBust, you lose!"
+      puts "Bust, you lose!"
       bust = true
       playing = false
     end
@@ -38,18 +38,16 @@ puts ""
 if bust != true
   dealer_playing = true
   2.times {dealer.hit(deck)}
-  puts "#{dealer.player}'s Score: #{dealer.score}"
-  puts ""
+  puts "#{dealer.player}'s Score: #{dealer.score}\n\n"
   while dealer_playing
     if dealer.score <= 21 && dealer.score > player.score
       puts "The dealer wins."
       dealer_playing = false
     elsif dealer.score < 17
       dealer.hit(deck)
-      puts "#{dealer.player}'s Score: #{dealer.score}"
-      puts ""
+      puts "#{dealer.player}'s Score: #{dealer.score}\n\n"
       if dealer.score > 21
-        puts "\nDealer busts, you win!"
+        puts "Dealer busts, you win!"
         dealer_playing = false
       end
     elsif dealer.score < 21 && dealer.score < player.score
