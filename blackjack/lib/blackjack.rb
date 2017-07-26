@@ -26,7 +26,7 @@ while playing
     if player.score > 21
       puts "Bust, you lose!"
       bust = true
-      playing = false
+      playing = falsecd
     end
   else
     playing = false
