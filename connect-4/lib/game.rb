@@ -7,28 +7,37 @@ class Game
 
   def create_board
     board = []
-    10.times do
+    11.times do
       row = []
-      12.times do
-        row << " "
+      12.times do |i|
+        if i == 0
+          row << " | "
+        elsif i == 11
+          row << " | "
+        else
+          row << "   "
+        end
       end
       board << row
     end
 
-    board.each do |row|
-      row.each_with_index do |space, i|
-        if i == 0
-          print " | "
-        elsif i == 11
-          print "| "
-        else
-          print "#{space} "
-        end
+    index = ["   ", " A "," B "," C "," D "," E "," F "," G "," H "," I "," J "]
+    board[-1] = index
+
+    return board
+  end
+
+  def display_board
+    @board.each do |row|
+      row.each do |space|
+        print space
       end
       print "\n"
     end
-    print "   A B C D E F G H I J "
-    return board
+  end
+
+  def check_for_win(player)
+    
   end
 
 end

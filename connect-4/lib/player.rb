@@ -42,10 +42,12 @@ class Player
       end
 
     while play
-      if board.board[i][input] == " "
-        board.board[i][input] << piece.type
+      if board.board[i][input] == "   "
+        board.board[i][input] = " #{piece.type} "
+        piece.location = { row: i, column: input }
+        binding.pry
         play = false
-      elsif board.board[0][input] != " "
+      elsif board.board[0][input] != "   "
         puts "You can't put a piece here"
         play = false
       else
