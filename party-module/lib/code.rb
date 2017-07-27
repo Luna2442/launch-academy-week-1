@@ -7,7 +7,7 @@ module PartyGoer
   end
 
   def drink
-    if @drink_count < 4
+    if @drink_count < 3
       @drink_count += 1
      true
     else
@@ -16,14 +16,14 @@ module PartyGoer
   end
 
   def sing
-    puts "Woah, Black Betty! Bam-a-lam!"
+    "Woah, Black Betty! Bam-a-lam!"
   end
 
   class PersonalizedHavocError < StandardError
   end
 
   def cause_havoc
-    raise PersonalizedHavocError, 'timE tO CauSe sOMe HavOC!!'
+    raise PersonalizedHavocError, "timE tO CauSe sOMe HavOC!!"
   end
 
   def invited?
